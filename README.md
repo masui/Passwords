@@ -1,6 +1,6 @@
 <h1>増井のパスワード</h1>
 
-<a href="https://masui.github.io/Passwords/">GitHubページ参照</a>
+<a href="https://masui.github.io/Passwords/">GitHubページ</a>参照
 
 <!--
 <ul>
