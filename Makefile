@@ -1,5 +1,6 @@
 copy:
 	cp *_*.html ../p
+	cp *_*.box ../p
 
 #get:
 #	wget http://episopass.com/Amazon_masui.html -O Amazon.html
