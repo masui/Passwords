@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0050)http://episopass.com/GitHub_masui@pitecan.com.html -->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="full-screen" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -75,12 +75,34 @@ function finish(){
     var newpass = exports.crypt(data.seed,secretstr());
     var center = $('<center>');
     $('body').append(center);
-    var passspan = $('<span>');
-    passspan.text(newpass);
-    passspan.css('font-size',width * 0.08);
+    //var passspan = $('<span>');
+    //passspan.text(newpass);
+
+    // これはできないのか
+    var passspan = $('<input>');
+    passspan.val(newpass);
+    passspan.attr('type','text');
+    passspan.css('font-size',width*0.06);
+    passspan.css('border-radius',width*0.015);
+    passspan.css('margin',width*0.01);
+    passspan.css('padding',width*0.02);
+    //passspan.attr('display','none');
+    //passspan.hide();
     center.append(passspan);
     
     center.append($('<p>'));
+
+    var show = $('<input>');
+    show.attr('type','button');
+    show.attr('value','Show');
+    show.css('font-size',width*0.05);
+    show.css('border-radius',width*0.015);
+    show.css('margin',width*0.01);
+    show.css('padding',width*0.02);
+    show.click(function(event){
+	passspan.show();
+    });
+    center.append(show);
 
     var input = $('<input>');
     input.attr('type','button');
@@ -93,6 +115,10 @@ function finish(){
         init();
     });
     center.append(input);
+
+    passspan.select();
+    document.execCommand("copy");
+    passspan.hide();
 }
 
 secretstr = function() {
@@ -546,8 +572,7 @@ exports.MD5_hexhash = function(data) {
 }).call(this);
 </script>
   </head>
-  <body style="margin: 0px; padding: 0px; border: 0px;" data-__gyazo-extension-added-paste-support="true">
-  
+  <body>
+  </body>
+</html>
 
-
-<center><span style="font-size: 89.68px;">XejXqp0579278</span><p></p><input type="button" value="Again" style="font-size: 56.05px; border-radius: 16.815px; margin: 11.21px; padding: 22.42px;"></center></body></html>
