@@ -1,6 +1,10 @@
 copy:
-	cp *_*.html ../p
-	cp *_*.box ../p
+	scp *_*.html pitecan.com:/www/www.pitecan.com/p
+	scp *.json pitecan.com:/www/www.pitecan.com/p
+
+#copy:
+#	cp *_*.html ../p
+#	cp *_*.box ../p
 
 #get:
 #	wget http://episopass.com/Amazon_masui.html -O Amazon.html
