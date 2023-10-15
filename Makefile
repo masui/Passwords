@@ -1,3 +1,5 @@
+list:
+	ruby makelist.rb > list.html
 copy:
 	scp *_*.html pitecan.com:/www/www.pitecan.com/p
 	scp *.json pitecan.com:/www/www.pitecan.com/p
